@@ -1,6 +1,6 @@
 -- See https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model
 CREATE TABLE `settings` (
-    `id`         int(10) UNSIGNED NOT NULL,
+    `id`         int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `entity`     varchar(255) DEFAULT NULL,
     `attribute`  varchar(255) NOT NULL,
     `value`      text DEFAULT NULL,
