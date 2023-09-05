@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,12 +18,12 @@
             method="post"
             action="login.php"
             >
+            <h1 class="text-sm font-bold border-b border-b-slate-300">Log In</h1>
             <input
                 class="px-2 py-1 border rounded border-slate-300 w-60"
-                type="text"
+                type="email"
                 name="email"
                 placeholder="email"
-                
                 />
             <div class="flex flex-col gap-2 items-start">
                 <input
@@ -41,13 +40,13 @@
             <div class="flex">
                 <div class="flex flex-col grow items-start text-sm gap-1 pt-1">
                     <a href="reset-password.php" class="text-blue-700 hover:underline">Reset Password</a>
-                    <a href="sign-up.php" class="text-blue-700 hover:underline">Sign Up</a>
+                    <a href="signup.php" class="text-blue-700 hover:underline">Sign Up</a>
                 </div>
                 <div class="flex flex-col grow items-end">
                     <button
                         type="submit"
-                        class="px-3 py-1 border rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
-                        >Login</button>
+                        class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
+                        >Log In</button>
                 </div>
             </div>
         </form>
