@@ -61,3 +61,12 @@ Thinking that there'll be another time that I'll have to create an authnz system
   * Permissions Check
   * Unauthorized Access Handling
 
+## Ignored Topics
+
+To have a fully functioning system, some other topics also need to be visited/implemented. However, most of these topics are not strictly related to authnz. They should be implemented system wide. So they will be ignored, or will be loosely implemented. These are:
+
+* Data Validation
+* CSRF Protection
+* Database Connection
+* Business Objects
+
