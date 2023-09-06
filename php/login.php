@@ -43,10 +43,14 @@
                     <a href="signup.php" class="text-blue-700 hover:underline">Sign Up</a>
                 </div>
                 <div class="flex flex-col grow items-end">
-                    <button
+                    <!-- <button
                         type="submit"
                         class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
-                        >Log In</button>
+                        >Log In</button> -->
+                    <a
+                        href="dashboard.php"
+                        class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
+                        >Log In</a>
                 </div>
             </div>
         </form>
