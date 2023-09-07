@@ -30,7 +30,7 @@
         <nav class="relative">
             <a
                 href="#" class="px-3 py-2 rounded flex gap-1 items-center hover:bg-slate-200/50 active:bg-slate-200"
-                data-toggle-dropdown="#header-user-nav"
+                data-dropdown-toggle="#header-user-nav"
                 >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
