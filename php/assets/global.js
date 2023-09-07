@@ -1,3 +1,5 @@
+// #region ==================== DROPDOWN TOGGLE
+
 let dropdownToggles = Array.from(document.querySelectorAll("[data-dropdown-toggle]"));
 
 dropdownToggles = dropdownToggles.filter(toggleEl => {
@@ -21,3 +23,36 @@ function dropdownToggle(toggleEl, dropdownEl) {
         }
     });
 }
+
+//#endregion
+
+// #region ==================== ASIDE TOGGLE
+
+document.querySelector("header").style.transition = "margin-left 250ms";
+document.querySelector("aside").style.transition  = "left 250ms";
+document.querySelector("main").style.transition   = "margin-left 250ms";
+document.querySelector("#aside-toggle").addEventListener("click", () => {
+    if (isAsideMenuVisible()) {
+        hideAsideMenu();
+    } else {
+        showAsideMenu();
+    }
+});
+
+function isAsideMenuVisible() {
+    return document.querySelector("aside").style.left == "";
+}
+
+function hideAsideMenu() {
+    document.querySelector("header").style.marginLeft = "0";
+    document.querySelector("aside").style.left = "calc(var(--aside-width) * -1)";
+    document.querySelector("main").style.marginLeft = "0";
+}
+
+function showAsideMenu() {
+    document.querySelector("header").style.marginLeft = "";
+    document.querySelector("aside").style.left = "";
+    document.querySelector("main").style.marginLeft = "";
+}
+
+//#endregion
