@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Roles</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-200 text-slate-700 [--header-height:4rem] [--aside-width:300px]">
@@ -15,7 +15,7 @@
     <main class="ml-[var(--aside-width)] p-6 min-h-[20vh] mb-[20vh]">
         
         <div class="bg-white/25 rounded shadow h-96 p-4">
-            <span class="opacity-50">Dashboard</span>
+            <span class="opacity-50">Roles</span>
         </div>
         
     </main>
