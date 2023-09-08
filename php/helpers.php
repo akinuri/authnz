@@ -9,3 +9,15 @@ function redirect(string $uri): bool {
     exit;
 }
 
+function getCurrentURL(): string {
+    return $_SERVER["REQUEST_URI"];
+}
+
+function isCurrentURL(string $url): string {
+    return getCurrentURL() == $url;
+}
+
+function htmlClass(): string {
+    return implode(" ", func_get_args());
+}
+
