@@ -104,6 +104,10 @@
                 <li>
                     <a href="settings.php" class="px-2 py-1 block w-full rounded hover:bg-slate-200/50 active:bg-slate-200">Settings</a>
                 </li>
+                <hr class="opacity-75">
+                <li>
+                    <a href="verify-email.php" class="px-2 py-1 block w-full rounded hover:bg-slate-200/50 active:bg-slate-200 text-slate-300">Verify Email</a>
+                </li>
             </ul>
         </nav>
         
