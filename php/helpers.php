@@ -48,3 +48,24 @@ function component(string $componentName, array $data = []) {
     return $isIncluded;
 }
 
+define("LAYOUTS_PATH", __DIR__ . "/layouts");
+
+function layout(string $layoutName, array $data = [], $content = "") {
+    $layoutPath = realpath(joinPaths([LAYOUTS_PATH, "$layoutName.php"]));
+    if (!file_exists($layoutPath)) {
+        throw new Exception("Layout ($layoutName) not found.");
+    }
+    extract($data);
+    ob_start();
+    $isIncluded = include $layoutPath;
+    $output = ob_get_clean();
+    if ($isIncluded === 1) {
+        return $output;
+    }
+    return $isIncluded;
+}
+
+function ob_start_onshutdown($callback) {
+    register_shutdown_function($callback);
+    ob_start();
+}
