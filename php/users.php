@@ -15,17 +15,21 @@
     
     <main class="ml-[var(--aside-width)] p-6 min-h-[20vh] mb-[20vh]">
         
-        <?= component("content-header", [
-            "title" => "Users",
-            "breadcrumbs" => [
-                ["users.php", "Users"],
-            ],
-            "actions" => [
-                ["add-user.php", "Add User"],
-            ],
-        ]) ?>
-        
-        <div class="bg-white rounded shadow h-96 p-4">
+        <div class="container mx-auto">
+            
+            <?= component("content-header", [
+                "title" => "Users",
+                "breadcrumbs" => [
+                    ["users.php", "Users"],
+                ],
+                "actions" => [
+                    ["add-user.php", "Add User"],
+                ],
+            ]) ?>
+            
+            <div class="bg-white rounded shadow h-96 p-4">
+                
+            </div>
             
         </div>
         
