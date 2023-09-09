@@ -16,7 +16,13 @@
     
     <div class="container mx-auto">
         
-        <?= $content ?? null ?>
+        <div class="flex flex-col gap-4 items-center w-fit mx-auto">
+            
+            <a href="index.php" class="text-lg font-bold">AuthNZ</a>
+            
+            <?= $content ?? null ?>
+            
+        </div>
         
     </div>
     
