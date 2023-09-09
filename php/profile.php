@@ -5,7 +5,7 @@
         echo layout(
             "dashboard",
             [
-                "title" => "My Profile",
+                "title" => "John Doe",
             ],
             ob_get_clean(),
         );
@@ -13,12 +13,20 @@
 ?>
 
 <?= component("content-header", [
-    "title" => "My Profile",
+    "title" => "John Doe",
     "breadcrumbs" => [
         ["users.php", "Users"],
-        ["profile.php", "Me"],
+        ["profile.php", "John Doe"],
     ],
     "actions" => [],
+]) ?>
+
+<?= component("entity-tabs", [
+    "items" => [
+        ["profile.php", "Info"],
+        ["user-roles.php", "Roles"],
+        ["user-permissions.php", "Permissions"],
+    ],
 ]) ?>
 
 <div class="bg-white rounded shadow p-4">
@@ -34,23 +42,32 @@
             type="text"
             name="display_name"
             placeholder="name"
+            value="John Doe"
             />
         <input
             class="px-2 py-1 border rounded border-slate-300 w-60"
             type="email"
             name="email"
             placeholder="email"
+            value="johndoe@example.com"
             />
         <input
             class="px-2 py-1 border rounded border-slate-300 w-full"
             type="password"
             name="password"
             placeholder="password"
+            value=""
             />
-        <button
-            type="submit"
-            class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
-            >Save</button>
+        <div class="flex gap-2 justify-between">
+            <button
+                type="reset"
+                class="px-3 py-1 rounded bg-slate-200 hover:bg-slate-300/70 active:bg-slate-300/90"
+                >Reset</button>
+            <button
+                type="submit"
+                class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
+                >Save</button>
+        </div>
     </form>
     
 </div>
