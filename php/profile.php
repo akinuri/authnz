@@ -1,3 +1,4 @@
+<?php require_once "helpers.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,15 @@
     
     <main class="ml-[var(--aside-width)] p-6 min-h-[20vh] mb-[20vh]">
         
-        <div class="bg-white rounded shadow">
+        <?= component("content-header", [
+            "title" => "My Profile",
+            "breadcrumbs" => [
+                ["users.php", "Users"],
+                ["profile.php", "Me"],
+            ],
+            "actions" => [],
+        ]) ?>
+        
             
             <form
                 autocomplete="off"
