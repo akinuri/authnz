@@ -205,8 +205,52 @@
         <thead>
             <tr class="font-medium bg-slate-100">
                 <td>#</td>
-                <td>Name</td>
-                <td>Email</td>
+                <td>
+                    <div class="flex items-center gap-1">
+                        <span>Name</span>
+                        <button
+                            class="p-1 rounded text-slate-400 hover:text-slate-500 active:text-slate-500 hover:bg-slate-200/80 active:bg-slate-300/50 mt-[1px]"
+                            >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-3 h-3"
+                                >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <div class="flex items-center gap-1">
+                        <span>Email</span>
+                        <button
+                            class="p-1 rounded text-slate-400 hover:text-slate-500 active:text-slate-500 hover:bg-slate-200/80 active:bg-slate-300/50 mt-[1px]"
+                            >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-3 h-3"
+                                >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </td>
                 <td>Actions</td>
             </tr>
         </thead>
@@ -230,10 +274,10 @@
                     <td>
                         <a
                             href="#"
-                            class="text-xs px-2 py-1 rounded bg-blue-200/70 hover:bg-blue-300/70 active:bg-blue-300/90"
+                            class="text-xs px-2 py-1 rounded text-blue-900/70 hover:text-blue-900/80 bg-blue-100 hover:bg-blue-200/70 active:bg-blue-200/90"
                         >Edit</a>
                         <button
-                            class="text-xs px-2 py-1 rounded bg-red-200/70 hover:bg-red-300/70 active:bg-red-300/90"
+                            class="text-xs px-2 py-1 rounded text-red-900/70 hover:text-red-900/80 bg-red-100 hover:bg-red-200/70 active:bg-red-200/90"
                         >Delete</button>
                     </td>
                 </tr>
