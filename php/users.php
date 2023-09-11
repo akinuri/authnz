@@ -285,4 +285,99 @@
         </tbody>
     </table>
     
+    <div
+        class="mt-4 flex justify-between items-center text-sm"
+        >
+        
+        <div>85 records found.</div>
+        
+        <ul class="flex gap-2 items-center text-slate-700/80">
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >First</a>
+            </li>
+            <li class="opacity-50">···</li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >3</a>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >4</a>
+            </li>
+            <li>
+                <form
+                    action="users.php"
+                    autocomplete="off"
+                    >
+                    <select
+                        name="page"
+                        class="px-1 py-1 h-full rounded bg-slate-200 hover:bg-slate-300/60 active:bg-slate-300/80"
+                        oninput="this.form.submit()"
+                        >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option selected>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </form>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >6</a>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >7</a>
+            </li>
+            <li class="opacity-50">···</li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-2 py-1 rounded bg-slate-100 hover:bg-slate-200/60 active:bg-slate-200/80"
+                    >Last</a>
+            </li>
+        </ul>
+        
+        <form
+            action="users.php"
+            autocomplete="off"
+            class="flex items-center h-7"
+            >
+            <span
+                class="px-2 bg-slate-100/80 border border-r-0 rounded rounded-tr-none rounded-br-none h-full flex items-center"
+                >Page size</span>
+                <select
+                    name="rows"
+                    class="px-2 border border-slate-200 h-full rounded rounded-tl-none rounded-bl-none"
+                    oninput="this.form.submit()"
+                    >
+                    <option selected>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>250</option>
+                    <option>500</option>
+                    <option>1000</option>
+                    <option>All</option>
+                </select>
+        </form>
+        
+    </div>
+    
 </div>
