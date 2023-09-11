@@ -5,7 +5,7 @@
             "project",
             [
                 "title"     => $title ?? null,
-                "bodyClass" => "bg-slate-200 text-slate-700 [--header-height:4rem] [--aside-width:200px]",
+                "bodyClass" => "bg-slate-200 text-slate-700 [--header-height:3rem] [--aside-width:200px]",
             ],
             ob_get_clean(),
         );
