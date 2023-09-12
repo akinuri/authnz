@@ -39,8 +39,14 @@
         />
     <div class="flex">
         <div class="flex flex-col grow items-start text-sm gap-1 pt-1">
-            <a href="reset-password.php" class="text-blue-700 hover:underline">Reset Password</a>
-            <a href="login.php" class="text-blue-700 hover:underline">Log In</a>
+            <?= component("anchor", [
+                "href" => "reset-password.php",
+                "text" => "Reset Password",
+            ]) ?>
+            <?= component("anchor", [
+                "href" => "login.php",
+                "text" => "Log In",
+            ]) ?>
         </div>
         <div class="flex flex-col grow items-end">
             <?= component("button-primary", [

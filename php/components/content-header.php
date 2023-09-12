@@ -16,12 +16,13 @@
     </div>
     
     <div>
-        <?php foreach ($actions ?? [] as $action) { ?>
-        <a
-            class="text-sm px-3 py-2 rounded bg-blue-300 hover:bg-blue-400/70 active:bg-blue-400/90"
-            href="<?= $action[0] ?>"
-            ><?= $action[1] ?></a>
-        <?php } ?>
+        <?php foreach ($actions ?? [] as $action) {
+            echo component("anchor-button-primary", [
+                "href" => $action[0],
+                "text" => $action[1],
+                "class" => "bg-blue-300/70 hover:bg-blue-300/90 active:bg-blue-400/60",
+            ]);
+        } ?>
     </div>
     
 </section>

@@ -27,8 +27,14 @@
         />
     <div class="flex">
         <div class="flex flex-col grow items-start text-sm gap-1 pt-1">
-            <a href="login.php" class="text-blue-700 hover:underline">Log In</a>
-            <a href="signup.php" class="text-blue-700 hover:underline">Sign Up</a>
+            <?= component("anchor", [
+                "href" => "login.php",
+                "text" => "Log In",
+            ]) ?>
+            <?= component("anchor", [
+                "href" => "signup.php",
+                "text" => "Sign Up",
+            ]) ?>
         </div>
         <div class="flex flex-col grow items-end">
             <?= component("button-primary", [

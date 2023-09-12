@@ -48,10 +48,10 @@
             placeholder="password"
             />
         <div class="flex gap-2 justify-between">
-            <a
-                href="users.php"
-                class="px-3 py-1 rounded bg-slate-200 hover:bg-slate-300/70 active:bg-slate-300/90"
-                >Cancel</a>
+            <?= component("anchor-button-secondary", [
+                "href" => "users.php",
+                "text" => "Cancel",
+            ]) ?>
             <?= component("button-primary", [
                 "type" => "submit",
                 "text" => "Save",
