@@ -36,14 +36,14 @@
             <div class="flex gap-4">
                 
                 <div class="relative">
-                    <button
-                        type="button"
-                        class="flex items-center gap-1 px-3 pr-2 h-8 rounded bg-slate-200/70 hover:bg-slate-300/70 active:bg-slate-300/90"
-                        data-dropdown-toggle="#entities-filters"
-                        >
-                        <span>Filter</span>
-                        <?= component("icons/chevron-down", ["class" => "w-4 h-4 mt-[2px]"]) ?>
-                    </button>
+                    <?= component(
+                        "button-secondary",
+                        [
+                            "class" => "flex items-center gap-1 h-8 pr-2 bg-slate-200/70",
+                            "data" => ["dropdown-toggle" => "#entities-filters"],
+                        ],
+                        "<span>Filter</span>" . component("icons/chevron-down", ["class" => "w-4 h-4 mt-[2px]"]),
+                    ) ?>
                     <ul
                         id="entities-filters"
                         class="absolute left-0 p-2 bg-white rounded shadow min-w-full w-40 mt-1 border"
@@ -117,20 +117,22 @@
                 
             </div>
             
-            <button
-                type="submit"
-                class="flex items-center px-3 h-8 rounded bg-slate-200/70 hover:bg-slate-300/70 active:bg-slate-300/90"
-            >Search</button>
+            <?= component("button-secondary", [
+                "class" => "flex items-center h-8 bg-slate-200/70",
+                "text" => "Search",
+            ]) ?>
             
         </form>
         
         <div class="flex gap-2 h-8">
-            <button
-                class="flex items-center px-3 h-full rounded bg-slate-200/70 hover:bg-slate-300/70 active:bg-slate-300/90"
-            >List</button>
-            <button
-                class="flex items-center px-3 h-full rounded bg-slate-200/70 hover:bg-slate-300/70 active:bg-slate-300/90"
-            >Grid</button>
+            <?= component("button-secondary", [
+                "class" => "flex items-center h-full bg-slate-200/70",
+                "text" => "List",
+            ]) ?>
+            <?= component("button-secondary", [
+                "class" => "flex items-center h-full bg-slate-200/70",
+                "text" => "Grid",
+            ]) ?>
         </div>
         
     </div>

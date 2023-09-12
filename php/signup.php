@@ -43,10 +43,10 @@
             <a href="login.php" class="text-blue-700 hover:underline">Log In</a>
         </div>
         <div class="flex flex-col grow items-end">
-            <button
-                type="submit"
-                class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
-                >Sign Up</button>
+            <?= component("button-primary", [
+                "type" => "submit",
+                "text" => "Sign Up",
+            ]) ?>
         </div>
     </div>
 </form>

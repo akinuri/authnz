@@ -59,14 +59,14 @@
             value=""
             />
         <div class="flex gap-2 justify-between">
-            <button
-                type="reset"
-                class="px-3 py-1 rounded bg-slate-200 hover:bg-slate-300/70 active:bg-slate-300/90"
-                >Reset</button>
-            <button
-                type="submit"
-                class="px-3 py-1 rounded bg-blue-200 hover:bg-blue-300/70 active:bg-blue-300/90"
-                >Save</button>
+            <?= component("button-secondary", [
+                "type" => "reset",
+                "text" => "Reset",
+            ]) ?>
+            <?= component("button-primary", [
+                "type" => "submit",
+                "text" => "Save",
+            ]) ?>
         </div>
     </form>
     
