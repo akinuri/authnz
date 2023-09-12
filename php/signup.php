@@ -19,24 +19,24 @@
     action="signup.php"
     >
     <h1 class="text-sm font-bold border-b border-b-slate-300">Sign Up</h1>
-    <input
-        class="px-2 py-1 border rounded border-slate-300 w-60"
-        type="text"
-        name="display_name"
-        placeholder="name"
-        />
-    <input
-        class="px-2 py-1 border rounded border-slate-300 w-60"
-        type="email"
-        name="email"
-        placeholder="email"
-        />
-    <input
-        class="px-2 py-1 border rounded border-slate-300 w-full"
-        type="password"
-        name="password"
-        placeholder="password"
-        />
+    <?= component("input", [
+        "class" => "w-60",
+        "name" => "display_name",
+        "placeholder" => "name",
+        "autofocus" => "",
+    ]) ?>
+    <?= component("input", [
+        "type" => "email",
+        "class" => "w-60",
+        "name" => "name",
+        "placeholder" => "email",
+    ]) ?>
+    <?= component("input", [
+        "type" => "password",
+        "class" => "w-60",
+        "name" => "password",
+        "placeholder" => "password",
+    ]) ?>
     <div class="flex">
         <div class="flex flex-col grow items-start text-sm gap-1 pt-1">
             <?= component("anchor", [

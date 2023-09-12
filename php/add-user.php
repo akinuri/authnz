@@ -29,24 +29,24 @@
         method="post"
         action="add-user.php"
         >
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-60"
-            type="text"
-            name="display_name"
-            placeholder="name"
-            />
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-60"
-            type="email"
-            name="email"
-            placeholder="email"
-            />
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-full"
-            type="password"
-            name="password"
-            placeholder="password"
-            />
+        <?= component("input", [
+            "class" => "w-60",
+            "name" => "display_name",
+            "placeholder" => "name",
+            "autofocus" => "",
+        ]) ?>
+        <?= component("input", [
+            "type" => "email",
+            "class" => "w-60",
+            "name" => "name",
+            "placeholder" => "email",
+        ]) ?>
+        <?= component("input", [
+            "type" => "password",
+            "class" => "w-60",
+            "name" => "password",
+            "placeholder" => "password",
+        ]) ?>
         <div class="flex gap-2 justify-between">
             <?= component("anchor-button-secondary", [
                 "href" => "users.php",

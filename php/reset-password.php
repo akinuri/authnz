@@ -19,12 +19,13 @@
     action="reset-password.php"
     >
     <h1 class="text-sm font-bold border-b border-b-slate-300">Reset Password</h1>
-    <input
-        class="px-2 py-1 border rounded border-slate-300 w-60"
-        type="email"
-        name="email"
-        placeholder="email"
-        />
+    <?= component("input", [
+        "type" => "email",
+        "class" => "w-60",
+        "name" => "name",
+        "placeholder" => "email",
+        "autofocus" => "",
+    ]) ?>
     <div class="flex">
         <div class="flex flex-col grow items-start text-sm gap-1 pt-1">
             <?= component("anchor", [

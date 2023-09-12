@@ -37,27 +37,26 @@
         method="post"
         action="profile.php"
         >
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-60"
-            type="text"
-            name="display_name"
-            placeholder="name"
-            value="John Doe"
-            />
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-60"
-            type="email"
-            name="email"
-            placeholder="email"
-            value="johndoe@example.com"
-            />
-        <input
-            class="px-2 py-1 border rounded border-slate-300 w-full"
-            type="password"
-            name="password"
-            placeholder="password"
-            value=""
-            />
+        <?= component("input", [
+            "class" => "w-60",
+            "name" => "display_name",
+            "placeholder" => "name",
+            "value" => "John Doe",
+            "autofocus" => "",
+        ]) ?>
+        <?= component("input", [
+            "type" => "email",
+            "class" => "w-60",
+            "name" => "name",
+            "placeholder" => "email",
+            "value" => "johndoe@example.com",
+        ]) ?>
+        <?= component("input", [
+            "type" => "password",
+            "class" => "w-60",
+            "name" => "password",
+            "placeholder" => "password",
+        ]) ?>
         <div class="flex gap-2 justify-between">
             <?= component("button-secondary", [
                 "type" => "reset",
