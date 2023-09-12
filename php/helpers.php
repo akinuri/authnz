@@ -18,7 +18,31 @@ function isCurrentURL(string $url): string {
 }
 
 function htmlClass(): string {
-    return implode(" ", func_get_args());
+    $classes = func_get_args();
+    $classes = normalizeHtmlClasses(...$classes);
+    // TODO: $classes = handleTailwindDuplicates($classes);
+    $classes = array_unique($classes);
+    $classes = implode(" ", $classes);
+    return $classes;
+}
+
+function normalizeHtmlClasses(): array {
+    $classes = func_get_args();
+    $classes = array_filter($classes, fn ($item) => !empty(trim($item)));
+    $classes = expandHtmlClasses(...$classes);
+    return $classes;
+}
+
+function expandHtmlClasses(): array {
+    $classes = [];
+    foreach (func_get_args() as $arg) {
+        if (str_contains($arg, " ")) {
+            $classes = array_merge($classes, preg_split("/\s+/", $arg));
+        } else {
+            $classes[] = $arg;
+        }
+    }
+    return $classes;
 }
 
 function joinPaths(array $paths, string $seperator = DIRECTORY_SEPARATOR) {
