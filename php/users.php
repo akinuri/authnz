@@ -42,20 +42,7 @@
                         data-dropdown-toggle="#entities-filters"
                         >
                         <span>Filter</span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-4 h-4 mt-1"
-                            >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                />
-                        </svg>
+                        <?= component("icons/chevron-down", ["class" => "w-4 h-4 mt-[2px]"]) ?>
                     </button>
                     <ul
                         id="entities-filters"
@@ -107,20 +94,7 @@
                         type="button"
                         class="px-1 flex items-center h-full border border-red-900/5 border-l-0 rounded rounded-tl-none rounded-bl-none cursor-pointer text-red-900/50 hover:text-red-900/60 bg-red-50 hover:bg-red-100/70 active:bg-red-100"
                         >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-3 h-3"
-                            >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                                />
-                        </svg>
+                        <?= component("icons/x-mark", ["class" => "w-3 h-3"]) ?>
                     </button>
                 </div>
                 
@@ -137,20 +111,7 @@
                         type="button"
                         class="px-1 flex items-center h-full border border-red-900/5 border-l-0 rounded rounded-tl-none rounded-bl-none cursor-pointer text-red-900/50 hover:text-red-900/60 bg-red-50 hover:bg-red-100/70 active:bg-red-100"
                         >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="w-3 h-3"
-                            >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M6 18L18 6M6 6l12 12"
-                                />
-                        </svg>
+                        <?= component("icons/x-mark", ["class" => "w-3 h-3"]) ?>
                     </button>
                 </div>
                 
@@ -211,20 +172,7 @@
                         <button
                             class="p-1 rounded text-slate-400 hover:text-slate-500 active:text-slate-500 hover:bg-slate-200/80 active:bg-slate-300/50 mt-[1px]"
                             >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-3 h-3"
-                                >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
-                                />
-                            </svg>
+                            <?= component("icons/arrows-up-down", ["class" => "w-3 h-3"]) ?>
                         </button>
                     </div>
                 </td>
@@ -234,20 +182,7 @@
                         <button
                             class="p-1 rounded text-slate-400 hover:text-slate-500 active:text-slate-500 hover:bg-slate-200/80 active:bg-slate-300/50 mt-[1px]"
                             >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-3 h-3"
-                                >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
-                                />
-                            </svg>
+                            <?= component("icons/arrows-up-down", ["class" => "w-3 h-3"]) ?>
                         </button>
                     </div>
                 </td>
