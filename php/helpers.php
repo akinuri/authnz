@@ -57,7 +57,7 @@ function joinPaths(array $paths, string $seperator = DIRECTORY_SEPARATOR) {
 
 define("COMPONENTS_PATH", __DIR__ . "/components");
 
-function component(string $componentName, array $data = []) {
+function component(string $componentName, array $props = [], $content = null) {
     $pathInfo = pathinfo($componentName);
     if (empty($pathInfo["extension"])) {
         $componentName .= ".php";
@@ -67,7 +67,7 @@ function component(string $componentName, array $data = []) {
     if (!file_exists($componentPath)) {
         throw new Exception("Component ($componentName) not found.");
     }
-    extract($data);
+    extract($props);
     ob_start();
     $isIncluded = include $componentPath;
     $output = ob_get_clean();
@@ -75,6 +75,12 @@ function component(string $componentName, array $data = []) {
         return $output;
     }
     return $isIncluded;
+}
+
+function printDataAttrs($data) {
+    foreach ($data as $attr => $value) {
+        echo "data-$attr=\"$value\"" . PHP_EOL;
+    }
 }
 
 define("LAYOUTS_PATH", __DIR__ . "/layouts");
