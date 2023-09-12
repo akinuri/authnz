@@ -58,7 +58,12 @@ function joinPaths(array $paths, string $seperator = DIRECTORY_SEPARATOR) {
 define("COMPONENTS_PATH", __DIR__ . "/components");
 
 function component(string $componentName, array $data = []) {
-    $componentPath = realpath(joinPaths([COMPONENTS_PATH, "$componentName.php"]));
+    $pathInfo = pathinfo($componentName);
+    if (empty($pathInfo["extension"])) {
+        $componentName .= ".php";
+    }
+    $componentPath = joinPaths([COMPONENTS_PATH, $componentName]);
+    $componentPath = realpath($componentPath);
     if (!file_exists($componentPath)) {
         throw new Exception("Component ($componentName) not found.");
     }
