@@ -1,5 +1,20 @@
 <?php
 
+function var_dump2() {
+    echo "<pre>";
+    var_dump(...func_get_args());
+    echo "</pre>";
+}
+
+function print_r2($value, bool $return = false) {
+    if ($return) {
+        return print_r($value, $return);
+    }
+    echo "<pre>";
+    print_r($value);
+    echo "</pre>";
+}
+
 function isLoggedIn(): bool {
     return false;
 }
@@ -20,7 +35,7 @@ function isCurrentURL(string $url): string {
 function htmlClass(): string {
     $classes = func_get_args();
     $classes = normalizeHtmlClasses(...$classes);
-    // TODO: $classes = handleTailwindDuplicates($classes);
+    // TODO: $classes = handleTailwindDuplicates(...$classes);
     $classes = array_unique($classes);
     $classes = implode(" ", $classes);
     return $classes;
@@ -28,7 +43,8 @@ function htmlClass(): string {
 
 function normalizeHtmlClasses(): array {
     $classes = func_get_args();
-    $classes = array_filter($classes, fn ($item) => !empty(trim($item)));
+    $classes = array_map(fn ($item) => trim($item), $classes);
+    $classes = array_filter($classes, fn ($item) => !empty($item));
     $classes = expandHtmlClasses(...$classes);
     return $classes;
 }
